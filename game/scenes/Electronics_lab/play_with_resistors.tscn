@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://biv606gadk4g0"]
+
+[ext_resource type="PackedScene" uid="uid://b3oqb6cta2a7l" path="res://game/scenes/Electronics_lab/components/resistor.tscn" id="1_7158f"]
+
+[node name="play_with_resistors" type="Node2D"]
+
+[node name="resistor" parent="." instance=ExtResource("1_7158f")]
