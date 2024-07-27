@@ -13,4 +13,5 @@ Features a virtual playground for interactive learning, including:
 Learning is made fun and engaging through:
 
  Gamification elements (e.g., points, badges, rewards)
+
  Hands-on exploration and discovery
