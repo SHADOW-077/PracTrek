@@ -16,4 +16,13 @@ texture = ExtResource("1_hbtf2")
 [node name="r_collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8g5cm")
 
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = -20.0
+offset_top = -48.0
+offset_right = 96.0
+offset_bottom = -17.0
+placeholder_text = "resistance"
+alignment = 1
+max_length = 4
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
