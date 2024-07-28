@@ -1,12 +1,14 @@
 extends Area2D
 
 var current_pt = 1
-
+var stop = false
 func _process(delta):
 	$wire.set_point_position(current_pt,get_global_mouse_position())
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("click") and stop == false:
 		$wire.add_point(get_global_mouse_position())
 		current_pt += 1
+	if Input.is_action_just_pressed('esc'):
+		stop = true
 		for i in range(0, $collision_container.get_child_count()):
 			$collision_container.get_child(i).queue_free()
 		for i in $wire.points.size() - 1:
