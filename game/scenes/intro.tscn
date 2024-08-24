@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://biv606gadk4g0"]
+
+[ext_resource type="Script" path="res://game/scripts/play_with_resistors.gd" id="1_xb8at"]
+[ext_resource type="PackedScene" uid="uid://b5ks58ck6w8yj" path="res://game/scenes/robot.tscn" id="2_5r3gd"]
+
+[node name="intro" type="Node2D"]
+position = Vector2(200, 352)
+script = ExtResource("1_xb8at")
+
+[node name="robot" parent="." instance=ExtResource("2_5r3gd")]
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 57.0
+offset_top = 140.0
+offset_right = 212.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 36
+text = "Yes"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
