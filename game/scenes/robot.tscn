@@ -7,15 +7,26 @@
 script = ExtResource("1_7tb3q")
 
 [node name="Icon" type="Sprite2D" parent="."]
+<<<<<<< Updated upstream
+=======
+modulate = Color(0.41, 0.785833, 0.82, 1)
+>>>>>>> Stashed changes
 scale = Vector2(1, 1.54)
 texture = ExtResource("1_6qeps")
 
 [node name="Dialog" type="Label" parent="."]
+<<<<<<< Updated upstream
 visible = false
 offset_left = 87.0
 offset_top = -152.0
 offset_right = 206.0
 offset_bottom = -112.0
+=======
+offset_left = 115.0
+offset_top = -150.0
+offset_right = 915.0
+offset_bottom = -50.0
+>>>>>>> Stashed changes
 theme_override_font_sizes/font_size = 26
 text = "ROBOT:"
 visible_characters = 6
