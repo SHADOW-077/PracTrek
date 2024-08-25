@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b5ks58ck6w8yj" path="res://game/scenes/robot.tscn" id="2_5r3gd"]
 
 [node name="intro" type="Node2D"]
-<<<<<<< Updated upstream
 position = Vector2(200, 352)
 script = ExtResource("1_xb8at")
 
@@ -16,19 +15,6 @@ offset_left = 57.0
 offset_top = 140.0
 offset_right = 212.0
 offset_bottom = 206.0
-=======
-script = ExtResource("1_xb8at")
-
-[node name="robot" parent="." instance=ExtResource("2_5r3gd")]
-position = Vector2(176, 394)
-
-[node name="Button" type="Button" parent="."]
-visible = false
-offset_left = 248.0
-offset_top = 518.0
-offset_right = 403.0
-offset_bottom = 584.0
->>>>>>> Stashed changes
 theme_override_font_sizes/font_size = 36
 text = "Yes"
 metadata/_edit_use_anchors_ = true
