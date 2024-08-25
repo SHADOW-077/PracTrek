@@ -1,7 +1,4 @@
 # PracTrek
-
-demo link : https://pixel-forge-studio.itch.io/practrek
-
 A gamified learning platform where users can:
 
  Acquire new skills
