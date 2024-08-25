@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5ks58ck6w8yj"]
+[gd_scene load_steps=4 format=3 uid="uid://b5ks58ck6w8yj"]
 
 [ext_resource type="Texture2D" uid="uid://cdgwe6vikk0tp" path="res://icon.svg" id="1_6qeps"]
 [ext_resource type="Script" path="res://game/scripts/robot.gd" id="1_7tb3q"]
+[ext_resource type="PackedScene" uid="uid://do5u36bk4wr3d" path="res://game/scenes/dialogs.tscn" id="3_67imf"]
 
 [node name="robot" type="Area2D"]
 script = ExtResource("1_7tb3q")
@@ -10,13 +11,8 @@ script = ExtResource("1_7tb3q")
 scale = Vector2(1, 1.54)
 texture = ExtResource("1_6qeps")
 
-[node name="Dialog" type="Label" parent="."]
-visible = false
-offset_left = 87.0
-offset_top = -152.0
-offset_right = 206.0
-offset_bottom = -112.0
-theme_override_font_sizes/font_size = 26
-text = "ROBOT:"
-visible_characters = 6
-metadata/_edit_use_anchors_ = true
+[node name="dialogs" parent="." instance=ExtResource("3_67imf")]
+offset_left = 190.0
+offset_top = -191.0
+offset_right = 320.0
+offset_bottom = -127.0
