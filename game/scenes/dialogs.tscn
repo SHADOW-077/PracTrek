@@ -1,40 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://do5u36bk4wr3d"]
+[gd_scene load_steps=5 format=3 uid="uid://do5u36bk4wr3d"]
 
-[ext_resource type="Texture2D" uid="uid://b3ox5h48s0j8y" path="res://game/assets/textures/text_box.png" id="1_avbvw"]
-[ext_resource type="FontFile" uid="uid://jgk30icd4v25" path="res://game/assets/textures/Kenney Rocket.ttf" id="2_kuxw5"]
+[ext_resource type="Texture2D" uid="uid://b3ox5h48s0j8y" path="res://game/assets/UI/text_box.png" id="1_avbvw"]
+[ext_resource type="Script" path="res://game/scripts/dialogs.gd" id="1_mfuc7"]
+[ext_resource type="FontFile" uid="uid://jgk30icd4v25" path="res://game/assets/FONT/Kenney Rocket.ttf" id="2_kuxw5"]
+[ext_resource type="Texture2D" uid="uid://cwlmu687aeu38" path="res://game/assets/textures/robo.png" id="4_acuse"]
 
 [node name="dialogs" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1056.0
-offset_bottom = -584.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 876.0
+offset_bottom = 120.0
+script = ExtResource("1_mfuc7")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
 texture = ExtResource("1_avbvw")
 region_rect = Rect2(0, 0, 48, 48)
-patch_margin_left = 16
-patch_margin_top = 32
-patch_margin_right = 16
-patch_margin_bottom = 32
+patch_margin_left = 18
+patch_margin_top = 30
+patch_margin_right = 18
+patch_margin_bottom = 30
 
 [node name="margin" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
 
 [node name="Dialog" type="Label" parent="margin"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_kuxw5")
-theme_override_font_sizes/font_size = 21
-text = "Robot:"
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = "robot:"
 vertical_alignment = 1
-visible_characters = 6
 metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.065
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(56, 63)
+scale = Vector2(2.65, 2.65)
+texture = ExtResource("4_acuse")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

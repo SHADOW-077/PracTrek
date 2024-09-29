@@ -9,15 +9,15 @@
 script = ExtResource("1_xb8at")
 
 [node name="dialogs" parent="." instance=ExtResource("3_dl5lc")]
-offset_left = 48.0
-offset_top = 33.0
-offset_right = 1870.0
-offset_bottom = 162.0
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 1911.0
+offset_bottom = 148.0
 
 [node name="background" parent="." instance=ExtResource("3_nfma6")]
 z_index = -30
 
 [node name="Led" parent="." instance=ExtResource("4_y6ffp")]
-position = Vector2(1087, 353)
+position = Vector2(934, 270)
 
 [connection signal="dialog_no" from="dialogs" to="." method="_on_dialogs_dialog_no"]

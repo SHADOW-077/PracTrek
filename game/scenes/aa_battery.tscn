@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://rh0lrdh31v2u"]
+
+[ext_resource type="Texture2D" uid="uid://bqn5iflelp0ma" path="res://game/assets/textures/AA_BATTERY.png" id="1_3g50i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oo11e"]
+size = Vector2(47, 123)
+
+[node name="AA_BATTERY" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_3g50i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_oo11e")

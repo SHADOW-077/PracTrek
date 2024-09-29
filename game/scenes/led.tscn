@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkxviwyo0bsti"]
+
+[ext_resource type="Script" path="res://game/scenes/led.gd" id="1_4qru3"]
+[ext_resource type="Texture2D" uid="uid://c3eq8cp5kl3xb" path="res://game/assets/textures/led.png" id="1_f0066"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6226"]
+atlas = ExtResource("1_f0066")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1glrs"]
+atlas = ExtResource("1_f0066")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwqq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6226")
+}],
+"loop": true,
+"name": &"glow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1glrs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_phjnd"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xpqh8"]
+gradient = SubResource("Gradient_phjnd")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.769231, 0.363248)
+
+[node name="Led" type="Area2D"]
+script = ExtResource("1_4qru3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5.3, 5.3)
+sprite_frames = SubResource("SpriteFrames_fwqq0")
+animation = &"glow"
+autoplay = "idle"
+flip_h = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -13)
+scale = Vector2(1.514, 1.514)
+color = Color(1, 0.15, 0.15, 1)
+energy = 0.3
+texture = SubResource("GradientTexture2D_xpqh8")
+texture_scale = 1.54
